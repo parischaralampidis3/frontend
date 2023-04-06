@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 8px;
+}
+#container {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-left: 23vh;
+}
+
+.element {
+  max-width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Roboto", sans-serif;
+  border-radius: 2%;
+}
+.first-element {
+  background: hsl(263, 55%, 52%);
+}
+
+.second-element {
+  background: hsl(217, 19%, 35%);
+}
+.third-element {
+  background: #ddd;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  max-width: 40%;
+}
+.fourth-element {
+  background: hsl(0, 0, 100%);
+  max-width: 100%;
+}
+.fifth-element {
+  max-width: 100%;
+  background: hsl(219, 29%, 14%);
+}
+#container > .element {
+  width: 90%;
+}
+img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.header-container {
+  display: flex;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+.info-name {
+  color: white;
+  font-size: 25px;
+}
+.info-paragraph {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 2;
+}
+.info-statement {
+  font-size: 23px;
+  color: white;
+}
+.small-caption {
+  font-size: 15px;
+}
+.medium-caption {
+  font-size: 23px;
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 1024px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .third-element {
+    max-width: 100%;
+  }
+}
