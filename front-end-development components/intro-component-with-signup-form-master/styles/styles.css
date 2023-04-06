@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-image: url("/images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins";
+}
+
+form {
+  border: 1px solid white;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.form-control {
+  margin-bottom: 5px;
+
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 10;
+  left: 0;
+  visibility: visible;
+  font-size: 11px;
+}
+.form-control.success input {
+  border-color: hsl(154, 59%, 51%);
+}
+.form-control.error input {
+  border-color: hsl(0, 100%, 74%);
+}
+.form-control.success i.fa-check-circle-o {
+  visibility: visible;
+  color: hsl(154, 59%, 51%);
+}
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: hsl(0, 100%, 74%);
+}
+.form-control.error small {
+  visibility: visible;
+  color: hsl(0, 100%, 74%);
+}
+.form button {
+  display: block;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: 10px;
+}

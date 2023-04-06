@@ -1,0 +1,156 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+#head-title {
+  color: hsl(300, 43%, 22%);
+  font-size: 3rem;
+  width: 300px;
+  margin-left: 100px;
+}
+#head-para {
+  width: 390px;
+  font-size: 16px;
+  color: hsl(300, 43%, 22%);
+  margin-left: 100px;
+}
+#heading-section {
+  padding: 30px;
+}
+
+#rated-section {
+  position: absolute;
+  left: 60%;
+  top: 100px;
+  font-size: 16px;
+  color: hsl(300, 43%, 22%);
+}
+.rated-element {
+  display: flex;
+  border: 0px solid;
+  background: hsl(300, 24%, 96%);
+  padding: 0 50px 0 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.icons {
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+#card-profile {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.card {
+  display: flex;
+  max-width: 300px;
+  background: hsl(300, 43%, 22%);
+  padding: 30px;
+  color: #ddd;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  padding-right: 30px;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  margin-top: 50px;
+  margin-left: 70vh;
+}
+
+/*media queries tablet*/
+
+@media only screen and (max-width: 1224px) {
+  #head-title {
+    width: 340px;
+    margin-left: 20vh;
+    text-align: center;
+  }
+  #head-para {
+    width: 390px;
+    font-size: 19px;
+    text-align: center;
+    margin-left: 24%;
+  }
+  #rated-section {
+    position: absolute;
+    left: 25%;
+    top: 400px;
+    font-size: 16px;
+    padding: 5px;
+  }
+  .rated-element {
+    flex-direction: column;
+  }
+  .icons {
+    margin-left: 50px;
+    padding-right: 50px;
+  }
+  #card-profile {
+    flex-direction: column;
+    margin-top: 50%;
+    margin-left: 25%;
+  }
+  .card {
+    display: flex;
+    max-width: 330px;
+    margin-top: 20px;
+    margin-bottom: 10%;
+    color: #ddd;
+  }
+
+  .attribution {
+    margin-top: 50px;
+    margin-left: 20vh;
+  }
+}
+
+/*media queries mobile*/
+@media only screen and (max-width: 670px) {
+  #head-title {
+    font-size: 2.5rem;
+    width: 340px;
+    margin-left: 10vh;
+
+    text-align: center;
+  }
+  #head-para {
+    width: 390px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 80px;
+  }
+  #rated-section {
+    left: 20%;
+    top: 330px;
+    margin-left: 40px;
+    font-size: 15px;
+  }
+  .icons {
+    margin-left: 10px;
+    padding-right: 20px;
+  }
+  #card-profile {
+    flex-direction: column;
+    margin-top: 60%;
+    margin-left: 25%;
+    margin-bottom: 10%;
+  }
+  .card {
+    width: 100%;
+    margin-top: 200px;
+  }
+  .attribution {
+    margin-top: 50px;
+    margin-left: 10vh;
+  }
+}

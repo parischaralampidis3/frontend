@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(255, 204, 204); 
+     font-family: 'Josefin Sans', sans-serif;
+}
+
+#mainNavbar{
+   
+    
+       font-size:1.5 em;  
+}
+
+#mainNavbar .navbar-brand{
+     color:rgb(200,100,100);
+    
+  
+    font-size:1.5em;
+}
+
+#mainNavbar .nav-link:hover {
+    color:rgb(200,100,100);
+}
+
+#headingGroup span{
+
+    color:rgb(200,100,100);
+
+  
+    
+}
+
+#headingGroup h1{
+    font-size:2rem;
+    font-weight:2rem;
+}
+
+@media(max-width : 1200px){
+
+#headingGroup h1{
+    font-size:1rem;
+    font-weight:1rem;
+}
+
+}

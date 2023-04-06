@@ -1,0 +1,53 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 50px;
+}
+
+#container-layout {
+  padding: 0px;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  background: #ddd1;
+  border-radius: 25px;
+}
+.pattern-image {
+  width: 100%;
+  border-radius: 5px;
+}
+.info-container {
+  display: flex;
+  margin: 0 auto;
+}
+.info {
+  padding-left: 20px;
+}
+.stats {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .stats {
+    margin-left: 0px;
+    font-size: 10px;
+  }
+}
