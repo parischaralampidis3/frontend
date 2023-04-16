@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap" rel="stylesheet">
+  <title>Results summary component</title>
+</head>
+<body>
+<!--first section-->
+<section id="flex_container">
+        <section id="sectionOne">
+          <div class="header">
+            <h3> Your Result</h3>
+          </div>
+          <div class="circle-box">
+            <h1 class="sub-circle-header">76</h1>
+            <h3 class="sub-circle-text">of 100</h3>
+          </div>
+          <div class="second-header">
+            <h3 class="second-sub-header">Great</h3>
+              <div>
+                <p class="second-sub-text">You scored higher than 65% of the people who have taken these tests.</p>
+              </div>  
+          </div>  
+        </section>
+        <!--second section-->
+        <section id="sectionTwo">
+          <div>
+            <h3 class="section-two-header">Summary</h3>
+                  <div id="flex-card-container">
+
+                        <div class="card-container-one">
+                              <div class="card-box">
+                                    <img class="icon" src="assets//images/icon-reaction.svg">
+                                    <h3 class="card-header-one">Reaction</h3>
+                                    <p><span class="value value-one"></span>/100</p>
+                              </div>
+                          </div>
+                        
+                          <div class="card-container-two">
+                              <div class="card-box">
+                                    <img class="icon" src="./assets/images/icon-memory.svg">
+                                    <h3 class="card-header-two">Memory</h3>
+                                    <p><span class="value value-two"></span>/100</p>
+                              </div>
+                          </div>
+                          <div class="card-container-three">
+                              <div class="card-box">
+                                    <img class="icon" src="./assets/images/icon-verbal.svg">
+                                    <h3 class="card-header-three">Verbal</h3>
+                                    <p><span class="value value-three"></span>/100</p>
+                              </div>
+                          </div>
+                          <div class="card-container-four"> 
+                              <div class="card-box">
+                                    <img class="icon" src="./assets//images/icon-visual.svg">
+                                    <h3 class="card-header-four">Visual</h3>
+                                    <p><span class="value value-four"></span>/100</p>
+                              </div>
+                        </div>
+
+                  </div>
+          </div>
+        
+             <div>
+                <button class="btn">Continue</button>
+            </div>
+      
+           
+        </section> 
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
