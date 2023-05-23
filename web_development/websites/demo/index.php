@@ -1,14 +1,18 @@
 <?php 
 
 require "functions.php";
+require "Database.php";
+require "router.php";
+
+//connect to thr database and, ececute a query
+
+//$config = require('config.php');
+
+//$db = new Database($config['database']);
+#$id = $_GET['id'];
+
+#$query = "select * from posts where id = {id}";
 
 
-$uri = $_SERVER['REQUEST_URI'];
 
-if($uri === '/'){
-    require 'controllers/index.php';
-} if($uri === '/about'){
-    require 'controllers/about.php';
-}if($uri === '/contact'){
-    require 'controllers/contact.php';
-}
+#$posts = $db->query($query)->fetch();
