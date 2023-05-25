@@ -6,7 +6,7 @@
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <li>
-                  <?= $notes['body'] ?>
+                  <?= $note['body'] ?>
             </li>   
             <a href="/notes" class="text-blue-500 hover:underline">Go back</a>   
     </div>
