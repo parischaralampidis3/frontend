@@ -8,9 +8,7 @@
             <li>
                   <?= $notes['body'] ?>
             </li>   
-            <a href="/notes" class="text-blue-500 hover:underline">Go back</a>
-          
-        
+            <a href="/notes" class="text-blue-500 hover:underline">Go back</a>   
     </div>
   </main>
 <?php require("partials/footer.php") ?>
