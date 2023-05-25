@@ -1,13 +1,15 @@
 <?php
-
-$config = require('config.php'); 
+$config = require('config.php');
 $db = new Database($config['database']);
 
-$heading = 'Note'; 
+$heading = 'Note';
 
 $id = $_GET['id'];
 
-$note = $db->query('select * from notes where id =' . $id = $_GET['id'])->fetch();
+// Sanitize the input to prevent SQL injection
+$id = intval($id); // Assuming the ID should be an integer
 
+$query = "SELECT * FROM notes WHERE id = $id";
+$notes = $db->query($query)->fetch();
 
 require("views/note.view.php");
