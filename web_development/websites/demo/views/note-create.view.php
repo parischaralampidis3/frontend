@@ -12,10 +12,17 @@
    
         <label for="body">Description</label> 
         <div>
-            <textarea id="body" name="body"></textarea>
+            <textarea name="body" id="body" rows=11 cols=50 maxlength=250><?= $_POST['body'] ?? '' ?></textarea>
+        
+          <div class="mt-4 text-red-400 text-xs">
+          <?php if (isset($errors['body'])) : ?>
+            <p><?= $errors['body'];  ?></p>
+          <?php endif; ?>
+          </div>
+
         </div>
         <p>
-          <button type="submit">create</button>
+          <button class="mt-4 bg-blue-500 p-5 text-white bordered py-4" type="submit">create</button>
         </p>
   </form>
 
