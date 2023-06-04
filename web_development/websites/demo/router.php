@@ -1,4 +1,5 @@
 <?php
+
 $routes = require("routes.php");
 
 function routeToController($uri, $routes){
