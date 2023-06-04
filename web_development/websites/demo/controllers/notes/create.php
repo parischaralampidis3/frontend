@@ -1,8 +1,8 @@
 <?php
 
-require('Validator.php');
+require base_path('Validator.php');
 
-$config = require('config.php'); 
+$config = require base_path('config.php'); 
 $db = new Database($config['database']);
 
 $heading="Create note";
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      $errors['body'] = "A body is required";   
     }
     
-    if($validation->string($POST['body']) > 1000 ){
+    if($validator->string($POST['body']) > 1000 ){
 
     $errors['body'] = "The body cannot be more than 1000 characters.";
 
@@ -39,4 +39,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 #dd($_SERVER);
-require("views/notes/create.view.php");
+require base_path("views/notes/create.view.php");
+
+view('notes/index.view.php', array(
+    'heading' => $heading, 
+    'notes' => $notes
+)
+); 
