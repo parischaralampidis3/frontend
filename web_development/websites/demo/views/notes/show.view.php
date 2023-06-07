@@ -3,12 +3,18 @@
 <?php require base_path("views/partials/navigation.php") ?>
 
 <?php require base_path("views/partials/banner.php")?>
+
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+
             <li>
                   <?= htmlspecialchars( $note['body'] ) ?>
-            </li>   
-            <a href="/notes" class="text-blue-500 hover:underline">Go back</a>   
+                  
+                  <a href="">Delete</a>
+            </li>
     </div>
+              
+            <a href="/notes" class="text-blue-500 hover:underline">Go back</a>   
+            
   </main>
 <?php require base_path("views/partials/footer.php") ?>
