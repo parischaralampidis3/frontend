@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    max-width: width 100%;
+    max-height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width:50%;
+    border-collapse: collapse;
+    margin:0 auto;
+    margin-top:10vh; 
+}
+table, tr, td{
+        border:1px solid black;
+}
+th{
+    padding:10px;
+}
+table td:first-child {
+  color:red;
+}
+table td:nth-child(1){
+    width:20%;
+    color:blue;
+}
+td{
+    padding:10px;
+}
