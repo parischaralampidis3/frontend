@@ -8,7 +8,7 @@
     
        
       
-  <form method="POST">
+  <form method="POST" action="/notes">
    
         <label for="body">Description</label> 
         <div>
