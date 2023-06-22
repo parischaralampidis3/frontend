@@ -1,15 +1,44 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>demo</title>
+    </head>
+    <body>
+        <?php
+        
+            $books = [
+                "sidarta",
+                "woodpeker",
+                "amanda"
+                ]; 
+  
+        ?>
+        <ul>
+            <?php foreach ($books as $book) : ?>   
+                        <li><?=  $book ?></li>
+            <?php endforeach; ?>
+        </ul>
 
-$name = 'Paris';
-$bool = false;
+    </body>
+</html>
 
 
-if ($bool) {
-    $message = "you guessed the name" . " $name ";
-} else {
-    $message = "The name is not"  . " $name";
-}
-?>
 
 
-<?= $message; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
