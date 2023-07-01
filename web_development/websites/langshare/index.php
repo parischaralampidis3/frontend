@@ -3,17 +3,35 @@
 require "functions.php";
 
 
-// Connect to the MySQL database.
-$dsn = "mysql:host=localhost;port=3306;dbname=langshare;user=root;charset=utf8mb4";
+class Database{
+    public $connection; 
+    function __construct(){
 
-// Tip: This should be wrapped in a try-catch. We'll learn how, soon.
-$pdo = new PDO($dsn);
+            $dsn = "mysql:host=localhost;port=3306;dbname=langshare;user=root;charset=utf8mb4";
+            // Tip: This should be wrapped in a try-catch. We'll learn how, soon.
+            $this->connection = new PDO($dsn);
 
-$statement = $pdo->prepare("select * from class");
-$statement->execute();
+    }
+    public function query($query){
 
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $statement = $this->connection->prepare($query);
 
-foreach ($posts as $post) {
-    echo "<li>" . $post['title'] . "</li>";
+
+            $statement->execute();
+
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    }
 }
+
+$db = new Database();
+$class=$db-> query("select * from class");
+
+
+// Connect to the MySQL daabase.
+
+            foreach ($class as $item) {
+    echo "<li>" . $item['title']. "</li>";
+}
+
+
