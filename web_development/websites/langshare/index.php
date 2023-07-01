@@ -1,19 +1,19 @@
 <?php
 
 require "functions.php";
- 
-$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
-dd($uri);
-die();
-if($uri === "/"){
-    require "controllers/index.php" ;
-}
-else if($uri === "/about"){
-    require "controllers/about.php" ;
-}
-else if($uri === "/contact"){
-    require "controllers/contact.php";
-}
 
-?>
+// Connect to the MySQL database.
+$dsn = "mysql:host=localhost;port=3306;dbname=langshare;user=root;charset=utf8mb4";
+
+// Tip: This should be wrapped in a try-catch. We'll learn how, soon.
+$pdo = new PDO($dsn);
+
+$statement = $pdo->prepare("select * from class");
+$statement->execute();
+
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($posts as $post) {
+    echo "<li>" . $post['title'] . "</li>";
+}
