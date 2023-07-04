@@ -21,7 +21,7 @@ class Database
         $statement = $this->connection->prepare($query);
 
 
-        $statement->execute($params);
+        $statement->execute($params); 
 
         return $statement;
 
