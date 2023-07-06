@@ -7,5 +7,6 @@
         <p>home page</p>
     </div>
 </main>
+<?php require("views/create.view.php"); ?>
 
 <?php require("partials/footer.php"); ?>
