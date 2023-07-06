@@ -15,11 +15,6 @@ $routes = [
 ];
 
 
- function abort($code = 404){
-    http_response_code($code);
-    require "views/{$code}.php";
-   
-}
 
 function routeToController($uri, $routes){
 
@@ -33,3 +28,9 @@ if(array_key_exists($uri,$routes)){
 }
 
 routeToController($uri, $routes);
+
+ function abort($code = 404){
+    http_response_code($code);
+    require "views/{$code}.php";
+   
+}

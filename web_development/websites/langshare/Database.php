@@ -3,7 +3,9 @@
 
 class Database
 {
-    public $connection;
+  
+    public $connection;  
+    public $statement;
     function __construct($config, $username='root' ,$password = '')
     {
      
@@ -18,13 +20,23 @@ class Database
     public function query($query,$params=[])
     {
 
-        $statement = $this->connection->prepare($query);
+        $this->statement = $this->connection->prepare($query);
 
 
-        $statement->execute($params); 
+        $this->statement->execute($params); 
 
-        return $statement;
+        return $this;
 
     }
+
+    public function fetchAll()
+    {
+        return $this->statement->fetchAll();
+    }
+    public function fetch()
+     {
+        return $this->statement->fetch();
+    }
+
 }
 

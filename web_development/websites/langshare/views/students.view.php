@@ -13,9 +13,7 @@
                         <?= $student['firstname'] .  $student['lastname'] . $student['email'] ?>
                     </a>
                 </li>          
-            <?php endforeach; ?>
-          <?php  var_dump($student['id'])?>
-         
+            <?php endforeach; ?> 
         </ul>
     </div>
 

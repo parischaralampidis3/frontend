@@ -14,15 +14,9 @@
                     </a>
                 </p>
 
-
                 <p class="mb-6">              
                         <?= $student['firstname'] .  $student['lastname'] . $student['email'] ?>
                 </p>
-
-              <!--  <?=  var_dump($students) ?>-->
-                
-          
-        </ul>
     </div>
 
 </main>
