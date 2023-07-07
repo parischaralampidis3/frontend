@@ -1,7 +1,7 @@
 <?php
 
+$routes = require('routes.php'); 
 
-$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
 
 //refactor the router;
@@ -27,6 +27,9 @@ if(array_key_exists($uri,$routes)){
 
 
 }
+
+
+$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
 routeToController($uri, $routes);
 
