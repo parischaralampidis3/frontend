@@ -4,16 +4,6 @@ $routes = require('routes.php');
 
 
 
-//refactor the router;
-//set an associative array with path and  uri 
-$routes = [
-    '/' => "controllers/index.php",
-    '/about' => "controllers/about.php",
-    '/contact' => "controllers/contact.php",
-    '/students' => "controllers/students.php",
-    '/student' => "controllers/student.php",
-    '/create' =>  "controllers/create.php"
-];
 
 
 

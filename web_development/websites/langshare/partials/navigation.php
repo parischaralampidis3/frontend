@@ -10,13 +10,15 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="/"
                             class="<?= url('/') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover: bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium"
-                            aria-current="page">Home</a>
+                            aria-current="page">Αρχική</a>
+                        <a href="/create" class="<?= url('/create') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover: bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Δημιουργία Εγγραγής</a>
+                         
                         <a href="/students"
-                            class="<?= url('/students') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Students</a>
+                             class="<?= url('/students') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Επισκόπηση</a>
                         <a href="/about"
-                            class="<?= url('/about') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                            class="<?= url('/about') ? "bg-gray-900  text-white" : "text-gray-300" ?>hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Σχετικά</a>
                         <a href="/contact"
-                            class="<?= url('/contact') ? "bg-gray-900  text-white" : "text-gray-300" ?> hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                            class="<?= url('/contact') ? "bg-gray-900  text-white" : "text-gray-300" ?> hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium">Επικοινωνία</a>
                     </div>
                 </div>
             </div>

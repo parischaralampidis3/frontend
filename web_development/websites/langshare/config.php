@@ -7,6 +7,8 @@ return [
             'port' => 3306,
             'dbname' => 'langshare',
             'charset' => 'utf8mb4' 
-
         ]
     ];
+
+
+    
