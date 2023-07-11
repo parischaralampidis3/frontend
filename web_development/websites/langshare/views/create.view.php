@@ -1,7 +1,6 @@
 <?php require("partials/head.php"); ?>
-<?php require("partials/navigation.php"); ?>
-
 <main>
+    <?php require("partials/navigation.php"); ?>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-12">
         <!-- Your content -->
         <div>
@@ -39,7 +38,28 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> 
 </main>
+
+<!--modal form submitting functionality -->
+<?php 
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        require("views/layouts/modals/modal-submit.php");
+    }
+?>
+<script>
+ 
+  
+    const navigation = document.querySelector('.navigation');
+    const btnClose = document.querySelector('.btn-close');
+    btnClose.addEventListener('click', function () {
+        // Hide the modal when the close button is clicked
+        modal.classList.add('hidden');
+
+        // Show the navigation bar
+        navigation.style.display = 'block';
+    });
+
+</script>
 
 <?php require("partials/footer.php"); ?>
