@@ -12,15 +12,19 @@
                 <div class="grid grid-cols-1 gap-4">
                     <div>
                         <label class="font-bold" for="firstname" class="block">Όνομα:</label>
-                        <input type="text" name="firstname" id="firstname" value="" required class="w-full"/>
+                        <input type="text" name="firstname" id="firstname" value="" class="w-full"/>
+
+                 
                     </div>
                     <div>
                         <label class="font-bold" for="lastname" class="block">Επώνυμο:</label>
-                        <input type="text" name="lastname" id="lastname" value="" required class="w-full"/>
+                        <input type="text" name="lastname" id="lastname" value=""  class="w-full"/>
+                   
                     </div>
                     <div>
                         <label class="font-bold" for="email" class="block">Email:</label>
-                        <input type="email" name="email" id="email" value="" required class="w-full"/>
+                        <input type="email" name="email" id="email" value="" class="w-full"/>
+                     
                     </div>
                     <div>
                         <label class="font-bold" for="city" class="block">Πόλη:</label>
@@ -29,6 +33,7 @@
                     <div>
                         <label class="font-bold" for="phone_number" class="block">Κινητό τηλέφωνο:</label>
                         <input type="text" name="phone_number" id="phone_number" value="" class="w-full"/>
+                     
                     </div>
                     <div>
                         <button type="submit" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4">

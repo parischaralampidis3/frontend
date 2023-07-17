@@ -4,12 +4,14 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        
+
         <?php
         $heading = [
             "Όνομα: ",
             "Επώνυμο: ",
-            "Email: "
+            "Email: ",
+            "Πολη/Περιοχή",
+            "Αριθμός Τηλεφώνου"
         ];
 
         $headingStyle = [
@@ -23,15 +25,15 @@
             <div class="pt-5 h-2/4">
                 <div class="flex flex-col">
                     <a href="#" class="">
-                        <div class="text-gray-800 shadow-lg bg-white hover:bg-gray-200 hover:text-gray-600 text-xl border p-5">
-
-                            <?php
-                            echo
+                        <div
+                            class="text-gray-800 shadow-lg bg-white hover:bg-gray-200 hover:text-gray-600 text-xl border p-5">
+                            <?=
                                 '<span style="' . $headingStyle[0] . '">' . $heading[0] . '</span>' . "   " . $student['firstname'] . "<br>" .
                                 '<span style="' . $headingStyle[0] . '">' . $heading[1] . '</span>' . "    " . $student['lastname'] . "<br>" .
-                                '<span style="' . $headingStyle[0] . '">' . $heading[2] . '</span>' . "    " . $student['email'] . "<br>";
+                                '<span style="' . $headingStyle[0] . '">' . $heading[2] . '</span>' . "    " . $student['email'] . "<br>" .
+                                '<span style="' . $headingStyle[0] . '">' . $heading[3] . '</span>' . "    " . $student['city'] . "<br>" .
+                                '<span style="' . $headingStyle[0] . '">' . $heading[4] . '</span>' . "    " . $student['phone_number'] . "<br>";
                             ?>
-
                         </div>
                     </a>
                 </div>

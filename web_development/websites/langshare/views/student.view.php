@@ -15,7 +15,7 @@
                 </p>
 
                 <p class="mb-6">              
-                        <?= $student['firstname'] .  $student['lastname'] . $student['email'] ?>
+                        <?= htmlspecialchars( $student['firstname'] .  $student['lastname'] . $student['email'] ) ?>
                 </p>
     </div>
 
