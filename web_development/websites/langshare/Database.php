@@ -33,6 +33,11 @@ class Database
     {
         return $this->statement->fetchAll();
     }
+
+    public function fetchColumn()
+    {
+         return $this->statement->fetchAll();
+    }
     public function fetch()
      {
         return $this->statement->fetch();
