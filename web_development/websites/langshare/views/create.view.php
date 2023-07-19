@@ -1,6 +1,8 @@
 <?php require("partials/head.php"); ?>
+<?php require("partials/navigation.php"); ?>
 <main>
-    <?php require("partials/navigation.php"); ?>
+    
+
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-12">
         <!-- Your content -->
         <div>
@@ -14,25 +16,29 @@
                         <label class="font-bold" for="firstname" class="block">Όνομα:</label>
                         <input type="text" name="firstname" id="firstname" value="" class="w-full"/>
 
+                        <?php if(isset($errors['firstname'])) : ?>
+                            <p><?= $errors['firstname'] ?></p>
+                        <?php endif; ?>
+
                  
                     </div>
                     <div>
                         <label class="font-bold" for="lastname" class="block">Επώνυμο:</label>
-                        <input type="text" name="lastname" id="lastname" value=""  class="w-full"/>
+                        <input type="text" name="lastname" id="lastname" value="" required class="w-full"/>
                    
                     </div>
                     <div>
                         <label class="font-bold" for="email" class="block">Email:</label>
-                        <input type="email" name="email" id="email" value="" class="w-full"/>
+                        <input type="email" name="email" id="email" value="" required class="w-full"/>
                      
                     </div>
                     <div>
                         <label class="font-bold" for="city" class="block">Πόλη:</label>
-                        <input type="text" name="city" id="city" value="" class="w-full"/>
+                        <input type="text" name="city" id="city" value="" required class="w-full"/>
                     </div>
                     <div>
                         <label class="font-bold" for="phone_number" class="block">Κινητό τηλέφωνο:</label>
-                        <input type="text" name="phone_number" id="phone_number" value="" class="w-full"/>
+                        <input type="text" name="phone_number" id="phone_number" required value="" class="w-full"/>
                      
                     </div>
                     <div>
@@ -46,15 +52,19 @@
     </div> 
 </main>
 
+
+
 <!--modal form submitting functionality -->
+
 <?php 
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        require("views/layouts/modals/modal-submit.php");
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if(!isset($errors['firstname'])){
+              require("views/layouts/modals/modal-submit.php");
+        }
+
     }
 ?>
-<script>
- 
-  
+<script> 
     const navigation = document.querySelector('.navigation');
     const btnClose = document.querySelector('.btn-close');
     btnClose.addEventListener('click', function () {
