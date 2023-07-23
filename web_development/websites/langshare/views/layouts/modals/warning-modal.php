@@ -5,7 +5,7 @@
         <button class="btn-close">X</button>
    </div>
    <div>
-     <h1>email user is already exists</h1>
+     <h1>H ηλεκτρονική διεύθυνση υπάρχει ήδη.</h1>
    </div>
 
 </section>

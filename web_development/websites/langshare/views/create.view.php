@@ -13,7 +13,8 @@
 
                 <div class="grid grid-cols-1 gap-4">
                     <div>
-                        <label class="font-bold" for="firstname" class="block"><span class="text-red-300">*</span>Όνομα:</label>
+                        <label class="font-bold" for="firstname" class="block"><span
+                                class="text-red-300">*</span>Όνομα:</label>
                         <input type="text" name="firstname" id="firstname" value="" class="w-full" />
                         <?php if (isset($errors['firstname'])): ?>
                             <p class="text-red-300 text-sm">
@@ -22,16 +23,18 @@
                         <?php endif; ?>
                     </div>
                     <div>
-                        <label class="font-bold" for="lastname" class="block"><span class="text-red-300">*</span>Επώνυμο:</label>
+                        <label class="font-bold" for="lastname" class="block"><span
+                                class="text-red-300">*</span>Επώνυμο:</label>
                         <input type="text" name="lastname" id="lastname" value="" class="w-full" />
                         <?php if (isset($errors['lastname'])): ?>
-                            <p class="text-red-300 text-sm" >
+                            <p class="text-red-300 text-sm">
                                 <?= $errors['lastname'] ?>
                             </p>
                         <?php endif; ?>
                     </div>
                     <div>
-                        <label class="font-bold" for="email" class="block"><span class="text-red-300">*</span>Email:</label>
+                        <label class="font-bold" for="email" class="block"><span
+                                class="text-red-300">*</span>Email:</label>
                         <input type="email" name="email" id="email" value="" required class="w-full" />
                         <?php if (isset($errors['email'])): ?>
                             <p class="text-red-300 text-sm">
@@ -42,24 +45,37 @@
                     </div>
                     <div>
                         <label class="font-bold" for="city" class="block">Πόλη:</label>
-                        <input type="text" name="city" id="city" value=""  class="w-full" />
+                        <input type="text" name="city" id="city" value="" class="w-full" />
                     </div>
                     <div>
-                        <label class="font-bold" for="phone_number" class="block"><span class="text-red-300">*</span>Κινητό τηλέφωνο:</label>
-                        <input type="text" name="phone_number" id="phone_number" required value="" class="w-full" />
+                        <label class="font-bold" for="phone_number" class="block"><span
+                                class="text-red-300">*</span>Κινητό τηλέφωνο:</label>
+                        <input type="text" name="phone_number" id="phone_number" value="" class="w-full" />
+                        <?php if (isset($errors['phone_number'])): ?>
+                            <p class="text-red-300 text-sm">
+                                <?= $errors['phone_number'] ?>
+                            </p>
+                        <?php endif; ?>
+                    </div>
 
-                    </div>
-                
                     <div>
-                        <h1 class="font-bold">Φύλο:</h1>
-                        <div class="border-solid border-2 border-sky-500 rounded-md w-1/3 p-5 mt-2">
-                                <input type="radio" id="male" name="sex" value="Άνδρας" required/>
-                                <label for="male">Άνδρας</label>
-                        
-                                <input class="mx-5" type="radio" id="female" name="sex" value="Γυναίκα" />
-                                <label for="male">Γυναίκα</label>
-                            
-                        </div>
+                        <div class="flex mb-5">
+                            <div class="flex flex-col">
+                                <h1 class="font-bold">Φύλο:</h1>
+                                <div class=" w-full border-solid border-2 border-sky-500 rounded-md w-1/3 p-5 mt-2">
+                                    <input type="radio" id="male" name="sex" value="Άνδρας" required />
+                                    <label for="male">Άνδρας</label>
+
+                                    <input class="mx-5" type="radio" id="female" name="sex" value="Γυναίκα" />
+                                    <label for="female">Γυναίκα</label>
+
+                                </div>
+                            </div>
+                         
+                                <div class="flex flex-col mt-1 mx-12">
+                                    <label for="birthdate" class="font-bold">Ημερομηνία Γέννησης</label>
+                                 <input class="p-3 mt-4" type="text" id="birthdate" name="birthdate" value="<?php  date("Y/m/d"); ?>" placeholder="  eg. 16 / 10 / 1984" /> 
+                                </div>
                     </div>
                     <div>
                         <button type="submit"
@@ -74,16 +90,13 @@
     </div>
 </main>
 
-
-
 <!--modal form submitting functionality -->
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!isset($errors['firstname']) && !isset($errors['lastname']) && !isset($errors['email'])) {
+    if (!isset($errors['firstname']) && !isset($errors['lastname']) && !isset($errors['email']) && !isset($errors['phone_number'])) {
         require("views/layouts/modals/modal-submit.php");
     }
-
 }
 ?>
 <script>
@@ -97,6 +110,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         navigation.style.display = 'block';
     });
 
+
+
+       
 </script>
 
 <?php require("partials/footer.php"); ?>

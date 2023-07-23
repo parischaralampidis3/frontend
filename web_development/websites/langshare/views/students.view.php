@@ -12,13 +12,12 @@
             "Email: ",
             "Πολη/Περιοχή:",
             "Αριθμός Τηλεφώνου: ",
-            "Φύλo: "
+            "Φύλo: ",
+            "Ημερομηνία Γέννησης"
         ];
 
         $headingStyle = [
             "font-weight:bold;
-            
-       
            "
         ]
             ?>
@@ -42,7 +41,8 @@
                                 <?= 
                                         '<span style="' . $headingStyle[0] . '">' . $heading[2] . '</span>' . "    " . $student['email'] . "<br>" .
                                         '<span style="' . $headingStyle[0] . '">' . $heading[3] . '</span>' . "    " . $student['city'] . "<br>" .
-                                        '<span style="' . $headingStyle[0] . '">' . $heading[4] . '</span>' . "    " . $student['phone_number'] . "<br>";
+                                        '<span style="' . $headingStyle[0] . '">' . $heading[4] . '</span>' . "    " . $student['phone_number'] . "<br>".
+                                        '<span style="' . $headingStyle[0] . '">' . $heading[6] . '</span>' . "    " . date('d-m-Y', strtotime($student['birthdate']))  . "<br>";
                                     ?>
                                 </div>
                         </div>
