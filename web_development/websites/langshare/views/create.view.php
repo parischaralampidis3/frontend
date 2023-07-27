@@ -41,11 +41,27 @@
                                 <?= $errors['email'] ?>
                             </p>
                         <?php endif; ?>
-
                     </div>
+    
                     <div>
                         <label class="font-bold" for="city" class="block">Πόλη:</label>
                         <input type="text" name="city" id="city" value="" class="w-full" />
+                    </div>
+                 <div class="flex">
+                      <div class="flex flex-col">
+                            <label class="font-bold" for="address" class="block">Διεύθυνση:</label>
+                            <input type="text" name="address" id="address" value="">
+                               <?php if (isset($errors['address'])): ?>
+                                     <p class="text-red-300 text-sm"><?= $errors['address'] ?></p>
+                                <?php endif; ?>     
+                        </div>
+                        <div class="flex flex-col mx-5">
+                            <label class="font-bold" for="postal_code" class="block">Ταχυδρομικός κώδικας:</label>
+                            <input class="mt-0" type="text" name="postal_code" id="postal_code" value=""/>
+                               <?php if (isset($errors['postal_code'])): ?>
+                                    <p class="text-red-300 text-sm"><?= $errors['postal_code'] ?></p>
+                                <?php endif; ?>
+                        </div>
                     </div>
                     <div>
                         <label class="font-bold" for="phone_number" class="block"><span
@@ -72,10 +88,13 @@
                                 </div>
                             </div>
                          
-                                <div class="flex flex-col mt-1 mx-12">
+                           
+                    </div> 
+                    
+                    
+                     <div class="flex flex-col mt-1 mx-0 mb-5">
                                     <label for="birthdate" class="font-bold">Ημερομηνία Γέννησης</label>
-                                 <input class="p-3 mt-4" type="text" id="birthdate" name="birthdate" value="<?php  date("Y/m/d"); ?>" placeholder="  eg. 16 / 10 / 1984" /> 
-                                </div>
+                                 <input class="p-3 mt-4" type="text" id="birthdate" name="birthdate" value="<?php echo  date("d/m/Y"); ?>" placeholder="eg. 16/10/1984" /> 
                     </div>
                     <div>
                         <button type="submit"
