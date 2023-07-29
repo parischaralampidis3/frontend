@@ -35,7 +35,7 @@
                     <div>
                         <label class="font-bold" for="email" class="block"><span
                                 class="text-red-300">*</span>Email:</label>
-                        <input type="email" name="email" id="email" value="" required class="w-full" />
+                        <input type="email" name="email" id="email" value=""  class="w-full" />
                         <?php if (isset($errors['email'])): ?>
                             <p class="text-red-300 text-sm">
                                 <?= $errors['email'] ?>
