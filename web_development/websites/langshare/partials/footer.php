@@ -4,7 +4,7 @@
 <div class="flex justify-center items-center bg-red-700  w-full h-1/3">
     <div class="container">
 
-        <div class="flex justify-center items-center text-gray-300 ">
+        <div class="flex justify-center items-center text-gray-100 ">
             <div class="mt-6">
                 <div class="flex flex-row">
                     <div class="flex flex-col">
