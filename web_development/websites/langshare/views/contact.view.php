@@ -1,5 +1,5 @@
-<?php require("partials/head.php"); ?>
-<?php require("partials/navigation.php"); ?>
+<?php require base_path("partials/head.php"); ?>
+<?php require base_path("partials/navigation.php"); ?>
 
 
 
@@ -10,4 +10,4 @@
     </div>
 </main>
 
-<?php require("partials/footer.php"); ?>
+<?php require base_path("partials/footer.php"); ?>

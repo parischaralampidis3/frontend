@@ -4,8 +4,8 @@ return [
     '/' => "controllers/index.php",
     '/about' => "controllers/about.php",
     '/contact' => "controllers/contact.php",
-    '/students' => "controllers/students.php",
-    '/student' => "controllers/student.php",
-    '/create' =>  "controllers/create.php"
+    '/students' => "controllers/langStudents/index.php",
+    '/student' => "controllers/langStudents/show.php",
+    '/create' =>  "controllers/langStudents/create.php"
 ];
 

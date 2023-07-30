@@ -1,5 +1,5 @@
-<?php require("partials/head.php"); ?>
-<?php require("partials/navigation.php"); ?>
+<?php require base_path("partials/head.php"); ?>
+<?php require base_path("partials/navigation.php"); ?>
 <main>
 
 
@@ -134,4 +134,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        
 </script>
 
-<?php require("partials/footer.php"); ?>
+<?php require base_path("partials/footer.php"); ?>

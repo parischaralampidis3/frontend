@@ -1,5 +1,5 @@
-<?php require("partials/head.php"); ?>
-<?php require("partials/navigation.php"); ?>
+<?php require base_path("partials/head.php"); ?>
+<?php require base_path("partials/navigation.php"); ?>
 
 
 
@@ -10,7 +10,7 @@
             <div class="flex">
 
                         <div class="w-1/4">
-                            <?php require("partials/sidebar.php"); ?>
+                            <?php require base_path("partials/sidebar.php"); ?>
                         </div>
 
                         <div>
@@ -131,4 +131,4 @@
 
 </main>
 
-<?php require("partials/footer.php"); ?>
+<?php require base_path("partials/footer.php"); ?>

@@ -1,14 +1,14 @@
 <?php 
 
 
-$config = require("config.php");
+$config = require base_path("config.php");
 $db = new Database($config['database']);
-
-$heading = "students";
 
 
 $students = $db->query("select * from students where class_id = 1")->fetchAll();
 
 
 
-require("views/students.view.php");    
+view("langStudents/index.view.php",[
+    'students' => $students
+]);    

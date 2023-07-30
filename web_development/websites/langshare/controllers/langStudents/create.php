@@ -1,7 +1,7 @@
 <?php
 
-require("Validator.php");
-$config = require("config.php");
+require base_path("Validator.php");
+$config = require base_path("config.php");
 
 $db = new Database($config['database']);
 $errors = [];
@@ -73,4 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     ;
 }
-require("views/create.view.php");
+view("langStudents/create.view.php");
